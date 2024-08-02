@@ -1,0 +1,31 @@
+.home-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(240, 255, 239, 1);
+  margin-top: 50px;
+  padding-block: 50px;
+}
+
+.home-title {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.home-subTitle {
+  color: rgba(31, 38, 62, 1);
+}
+.home-text {
+  font-weight: 400;
+  font-size: 16px;
+}
+.home-button {
+  background: rgba(0, 146, 71, 1);
+  border-radius: 12px;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 700;
+  font-size: 16px;
+  padding-inline: 57px;
+  padding-block: 13px;
+}

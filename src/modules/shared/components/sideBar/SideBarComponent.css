@@ -1,0 +1,30 @@
+.sideBar-container .ps-menu-root {
+  background: #1f263e;
+  height: 100vh;
+  color: #ffffff;
+  padding-top: 50px;
+  border-top-right-radius: 25px;
+}
+
+.sideBar-container li:nth-of-type(1) {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sideBar-container li:nth-of-type(1) :hover {
+  background: transparent;
+}
+
+.sideBar-container li:nth-of-type(2) {
+  margin-top: 83px;
+}
+
+.sideBar-container li:not(:first-child) :hover {
+  background: rgba(0, 146, 71, 0.1) !important;
+}
+
+.sideBar-container .ps-menu-root :hover {
+  background: transparent;
+}

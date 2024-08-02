@@ -1,0 +1,47 @@
+.register-window {
+  width: 70%;
+  border-radius: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-logo {
+  margin-top: 57px;
+}
+
+.register-title-container {
+  width: 90%;
+}
+
+.register-tiltle {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.register-form {
+  width: 90%;
+  margin-top: 40px;
+}
+
+.register-links-container {
+  width: 75%;
+  text-align: end;
+}
+
+.register-button {
+  background-color: #4aa35a;
+  width: 50%;
+  height: 48px;
+  margin-top: 34px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.register-button span {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+}

@@ -1,0 +1,21 @@
+.inderNavbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 146, 71, 1);
+  border-radius: 15px;
+  padding-inline: 50px;
+  margin-top: 25px;
+}
+
+.underNavBar-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.underNavBar-text {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 1);
+}

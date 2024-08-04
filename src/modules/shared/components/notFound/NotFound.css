@@ -1,0 +1,71 @@
+.notFound-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-inline: 40px;
+}
+
+.notFound-leftSection {
+}
+
+.notFound-logo {
+  margin-top: 38px;
+}
+.notFound-text {
+  margin-top: 156px;
+}
+
+.notFound-title {
+  font-weight: 700;
+  font-size: 40px;
+  color: rgba(31, 38, 62, 1);
+}
+
+.notFound-p {
+  font-weight: 400;
+  font-size: 32px;
+  color: rgba(0, 146, 71, 1);
+  margin-block-start: 0;
+  padding-block-start: 0;
+}
+
+.notFound-p::before {
+  content: "...";
+  position: relative;
+  left: 30px;
+  top: 15px;
+  font-weight: 700;
+  font-size: 40px;
+  color: rgba(31, 38, 62, 1);
+}
+.notFound-subTitle {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgba(31, 38, 62, 1);
+}
+
+.notFound-link {
+  width: 50%;
+  background: rgba(0, 146, 71, 1);
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+  padding: 10px;
+  border: none;
+  border-color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-decoration: none;
+  margin-top: 66px;
+}
+
+.notFound-rightSection {
+  margin-block-start: 15%;
+  display: flex;
+  align-items: start;
+
+  background-image: url(../../../../assets//images//notFound/Vector.png);
+  background-position: left;
+  background-position: cover;
+}

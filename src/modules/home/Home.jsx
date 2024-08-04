@@ -38,7 +38,7 @@ export default function Home() {
           <div>
             <button className="home-button">
               <span>Fill Recipes</span>
-              <i className="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-arrow-right ms-3"></i>
             </button>
           </div>
         </div>

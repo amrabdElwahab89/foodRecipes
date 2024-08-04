@@ -23,7 +23,7 @@ export default function UserDataContext({ children }) {
       );
       toast.success("Login Successfully");
       navigate("/layoutMaster");
-      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("token", response?.data?.token);
     } catch (error) {
       toast.error(error.response.data.message);
     }
@@ -46,10 +46,10 @@ export default function UserDataContext({ children }) {
         }
       );
 
-      toast.success(response.data.message);
+      toast.success(response?.data?.message);
       navigate("/resetPassword");
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error?.response?.data?.message);
     }
   };
 
@@ -70,7 +70,7 @@ export default function UserDataContext({ children }) {
       toast.success("Password Changed Successfuly");
       navigate("/login");
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error?.response?.data?.message);
     }
   };
 

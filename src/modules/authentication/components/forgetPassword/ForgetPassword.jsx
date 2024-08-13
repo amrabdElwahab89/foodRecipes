@@ -4,11 +4,11 @@ import { CiMobile1 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { CiLock } from "react-icons/ci";
 import { useForm } from "react-hook-form";
-import { userContext } from "../../../context/UserDataContext";
+import { authContext } from "../../context/AuthDataContext";
 import logo from "../../../../assets/images/logIn/logo.svg";
 
 export default function ForgetPassword() {
-  const { forgetPassword } = useContext(userContext);
+  const { forgetPassword } = useContext(authContext);
   const {
     register,
     handleSubmit,

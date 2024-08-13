@@ -1,28 +1,26 @@
-.home-container {
+.secTitle-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: rgba(240, 255, 239, 1);
   margin-top: 50px;
   padding-block: 50px;
-  margin-inline: 50px;
-  padding-inline: 30px;
+  padding-inline: 50px;
 }
 
-.home-title {
+.secTitle-title {
   font-weight: 500;
   font-size: 24px;
 }
 
-.home-subTitle {
-  sectitle: rgba(31, 38, 62, 1);
+.secTitle-subTitle {
+  color: rgba(0, 146, 71, 1);
 }
-
-.home-text {
+.secTitle-text {
   font-weight: 400;
   font-size: 16px;
 }
-.home-button {
+.secTitle-button {
   background: rgba(0, 146, 71, 1);
   border-radius: 12px;
   border: none;

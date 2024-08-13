@@ -1,8 +1,4 @@
-import {
-  createBrowserRouter,
-  createHashRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Login from "./modules/authentication/components/logIn/Login";
 import LayoutAuth from "./modules/shared/components/layOutAuthentication/LayoutAuth";
@@ -15,10 +11,16 @@ import CategoriesList from "./modules/categories/components/categoriesList/Categ
 import UsersList from "./modules/users/components/usersList/UsersList";
 import LayOutMaster from "./modules/shared/components/layOutMaster/LayOutMaster";
 import Home from "./modules/home/Home";
-import UserDataContext from "./modules/context/UserDataContext";
+import UserDataContext from "./modules/authentication/context/AuthDataContext";
 import ProtectedRoute from "./modules/shared/components/protectedRoute/ProtectedRoute";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CategoriesDataContext from "./modules/categories/context/CategoriesDataContext";
+import RecipesDataContext from "./modules/recipes/context/RecipesDataContext";
+import UsersListDataContext from "./modules/users/components/context/UsersListDataContext";
+import AuthDataContext from "./modules/authentication/context/AuthDataContext";
+import AddRecipy from "./modules/recipes/components/addRecipy/AddRecipy";
+import EditRecipy from "./modules/recipes/components/editRecipy/EditRecipy";
 
 function App() {
   const routes = createHashRouter([
@@ -50,9 +52,11 @@ function App() {
     {
       path: "/layoutMaster",
       element: (
-        <UserDataContext>
-          <LayOutMaster />
-        </UserDataContext>
+        <CategoriesDataContext>
+          <AuthDataContext>
+            <LayOutMaster />
+          </AuthDataContext>
+        </CategoriesDataContext>
       ),
       errorElement: <NotFound />,
       children: [
@@ -75,15 +79,44 @@ function App() {
         },
         {
           path: "recipesList",
-          element: <RecipesList />,
+          element: (
+            <RecipesDataContext>
+              <RecipesList />
+            </RecipesDataContext>
+          ),
         },
         {
           path: "categories",
-          element: <CategoriesList />,
+          element: (
+            <CategoriesDataContext>
+              <CategoriesList />
+            </CategoriesDataContext>
+          ),
         },
         {
           path: "users",
-          element: <UsersList />,
+          element: (
+            <UsersListDataContext>
+              <UsersList />
+            </UsersListDataContext>
+          ),
+        },
+        {
+          path: "addRecipe",
+          element: (
+            <RecipesDataContext>
+              <AddRecipy />
+            </RecipesDataContext>
+          ),
+        },
+
+        {
+          path: "edit-recipe",
+          element: (
+            <RecipesDataContext>
+              <EditRecipy />
+            </RecipesDataContext>
+          ),
         },
       ],
     },

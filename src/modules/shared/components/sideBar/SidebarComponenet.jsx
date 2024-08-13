@@ -28,7 +28,7 @@ export default function SidebarComponenet() {
               },
             }}
           >
-            <MenuItem onClick={toggled} component={<Link to="/layoutMaster" />}>
+            <MenuItem onClick={toggled}>
               <img src={logo} alt="" />
             </MenuItem>
             <MenuItem
@@ -60,7 +60,7 @@ export default function SidebarComponenet() {
             </MenuItem>
             <MenuItem
               icon={<i className="fa-solid fa-unlock"></i>}
-              component={<Link to="/layoutMaster/changePassword" />}
+              component={<Link to="/forgetPassword" />}
             >
               Change Password
             </MenuItem>

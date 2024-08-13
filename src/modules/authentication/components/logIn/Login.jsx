@@ -1,22 +1,22 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "./Login.css";
 import logo from "../../../../assets/images/logIn/logo.svg";
 import { CiMobile1 } from "react-icons/ci";
 import { Link } from "react-router-dom";
 import { CiLock } from "react-icons/ci";
 import { useForm } from "react-hook-form";
-import { userContext } from "../../../context/UserDataContext";
+import { authContext } from "../../context/AuthDataContext";
 
 export default function Login() {
-  const { onSubmit } = useContext(userContext);
+  const { onSubmit } = useContext(authContext);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const handleLogin = ({ email, password }) => {
-    onSubmit(email, password);
+  const handleLogin = (formData) => {
+    onSubmit(formData);
   };
 
   return (
@@ -54,10 +54,11 @@ export default function Login() {
                   },
                 })}
               />
+
+              {errors.email && (
+                <p className="text-danger"> {errors.email.message} </p>
+              )}
             </div>
-            {errors.email && (
-              <p className="text-danger"> {errors.email.message} </p>
-            )}
 
             {/* ..................................Password */}
             <div className="input-group mb-4">
@@ -79,10 +80,11 @@ export default function Login() {
                   },
                 })}
               />
+
+              {errors.password && (
+                <p className="text-danger"> {errors.password.message} </p>
+              )}
             </div>
-            {errors.password && (
-              <p className="text-danger"> {errors.password.message} </p>
-            )}
 
             {/* Link */}
             <div className="login-links-container">
